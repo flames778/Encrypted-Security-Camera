@@ -22,8 +22,8 @@ A privacy-focused security camera application that runs natively on macOS (and c
 
 2. **Clone the repository and enter the directory:**
    ```bash
-   git clone <repository_url>
-   cd encrypted_security_camera
+   git clone https://github.com/flames778/Encrypted-Security-Camera.git
+   cd Encrypted-Security-Camera
    ```
 
 3. **Set up a virtual environment and install dependencies:**
