@@ -1,0 +1,7 @@
+keys/
+footage/
+__pycache__/
+.DS_Store
+venv/
+*.enc
+*.h264
