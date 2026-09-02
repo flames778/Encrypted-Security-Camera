@@ -76,3 +76,5 @@ ffplay merged.h264
 - **Key on USB**: Store the key on a physical USB drive. The camera will only record/decrypt if the specific USB drive is mounted.
 - **Cloud Auto-Upload**: Safely upload encrypted chunks to a cloud provider like S3 or Google Drive. Since they are encrypted, the cloud provider cannot view the footage.
 - **Raspberry Pi Deployment**: Swap the OpenCV webcam capture with the Pi Camera module.
+
+- This project is actively being developed and improved.
