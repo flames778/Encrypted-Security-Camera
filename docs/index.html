@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypted Security Camera | Privacy-First Surveillance</title>
+    <meta name="description" content="A privacy-focused security camera application that natively encrypts footage using AES-256-GCM. No plaintext video is ever stored.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Feather Icons for modern vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="background-glow secondary"></div>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i data-feather="shield"></i>
+                <span>SecureCam</span>
+            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="https://github.com/flames778/Encrypted-Security-Camera" class="btn-outline" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">Open Source & Privacy Focused</div>
+                    <h1>Your footage, <span class="text-gradient">cryptographically</span> secured.</h1>
+                    <p>A native macOS application that captures video, splits it into chunks, and encrypts it using AES-256-GCM before it ever touches your disk. Absolute privacy, out of the box.</p>
+                    <div class="hero-actions">
+                        <a href="https://github.com/flames778/Encrypted-Security-Camera" class="btn-primary" target="_blank" rel="noopener">
+                            <i data-feather="github"></i> View Repository
+                        </a>
+                        <a href="#setup" class="btn-secondary">Setup Guide</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="glass-card terminal-mockup">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <code>$ python main.py</code>
+                            <code class="success">Starting Encrypted Security Camera...</code>
+                            <code class="success">Encryption key loaded successfully.</code>
+                            <code>Webcam opened at 1280x720 @ 30.0 fps</code>
+                            <code>Listening for motion... (Press Ctrl+C to stop)</code>
+                            <code class="warning">> Motion detected! Started recording.</code>
+                            <code>> Encrypting chunk: 2451082 bytes...</code>
+                            <code class="success">> Saved: footage/20261008_204858.enc</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Uncompromising Security</h2>
+                    <p>Built from the ground up to ensure your private spaces stay private.</p>
+                </div>
+                <div class="grid">
+                    <div class="feature-card glass-card">
+                        <div class="icon-wrapper"><i data-feather="lock"></i></div>
+                        <h3>AES-256-GCM Encryption</h3>
+                        <p>Military-grade encryption ensures both the confidentiality and authenticity of your footage. No one can read or tamper with it without your key.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="icon-wrapper"><i data-feather="hard-drive"></i></div>
+                        <h3>Chunk-Based Storage</h3>
+                        <p>Video is continuously saved in encrypted, 10-second chunks, allowing for easy storage management and partial decryption when needed.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="icon-wrapper"><i data-feather="eye"></i></div>
+                        <h3>Smart Motion Detection</h3>
+                        <p>Powered by OpenCV, the camera intelligently detects movement and only records when necessary, saving massive amounts of disk space.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="icon-wrapper"><i data-feather="video"></i></div>
+                        <h3>Raw H.264 Video</h3>
+                        <p>Utilizes ffmpeg to encode raw frames directly into efficient H.264 streams, maintaining high quality with zero latency before encryption.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="setup" class="cta-section">
+            <div class="container">
+                <div class="glass-card cta-card">
+                    <h2>Ready to secure your space?</h2>
+                    <p>Get started with just a few terminal commands.</p>
+                    <div class="code-block">
+                        <code>git clone https://github.com/flames778/Encrypted-Security-Camera.git</code>
+                        <code>cd Encrypted-Security-Camera</code>
+                        <code>python3 -m venv venv && source venv/bin/activate</code>
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 flames778. Open source under the MIT License.</p>
+            <div class="social-links">
+                <a href="https://github.com/flames778/Encrypted-Security-Camera" target="_blank" aria-label="GitHub"><i data-feather="github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
